@@ -1,6 +1,6 @@
 {
   "name": "clock",
-  "main": "expo-router/entry",
+  "main": "main.js",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
