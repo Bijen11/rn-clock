@@ -1,59 +1,152 @@
-import {MotiView} from 'moti';
-import {useEffect} from 'react';
+import {
+  View,
+  Animated,
+  Platform,
+  StatusBar,
+  StyleSheet,
+  Dimensions,
+} from 'react-native';
+import React from 'react';
 import 'react-native-reanimated';
-import {Easing} from 'react-native-reanimated';
-import {View, Dimensions, StyleSheet} from 'react-native';
-import {DarkTheme, DefaultTheme, ThemeProvider} from '@react-navigation/native';
 
-import {Stack} from 'expo-router';
-import {useFonts} from 'expo-font';
-import {Feather} from '@expo/vector-icons';
-import * as SplashScreen from 'expo-splash-screen';
-
-import {useColorScheme} from '@/hooks/useColorScheme';
+import dayjs from 'dayjs';
 
 const {width} = Dimensions.get('screen');
 
-const SIZE = width * 0.9;
+const SIZE = Platform.OS === 'web' ? width * 0.5 : width * 0.9;
+const TICK_INTERVAL = 1000;
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+export default class RootLayout extends React.Component {
+  state = {
+    index: new Animated.Value(0),
+    tick: new Animated.Value(0),
+    scales: [...Array(6).keys()].map(() => new Animated.Value(0)),
+  };
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+  _timer = 0;
+  _ticker: any = null;
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
+  componentDidMount(): void {
+    const current = dayjs();
+    const diff = current.endOf('day').diff(current, 'seconds');
 
-  if (!loaded) {
-    return null;
+    const oneDay = 24 * 60 * 60;
+    this._timer = oneDay - diff;
+    this.state.tick.setValue(this._timer);
+    this.state.index.setValue(this._timer - 30);
+
+    this._animate();
+
+    this._ticker = setInterval(() => {
+      this._timer += 1;
+      this.state.tick.setValue(this._timer);
+    }, TICK_INTERVAL);
   }
 
-  return (
-    <View style={style.container}>
-      <View style={[style.bigQuadran]} />
-      <View style={[style.mediumQuadran]} />
-      <View style={[style.smallQuadran]} />
+  _animate = () => {
+    const scaleStaggerAnimation = this.state.scales.map((animated) => {
+      return Animated.spring(animated, {
+        toValue: 1,
+        tension: 18,
+        friction: 3,
+        useNativeDriver: true,
+      });
+    });
 
-      <View style={[style.mover]}>
-        <View style={[style.hours]} />
-      </View>
+    Animated.parallel([
+      Animated.stagger(
+        TICK_INTERVAL / this.state.scales.length,
+        scaleStaggerAnimation,
+      ),
 
-      <View style={[style.mover]}>
-        <View style={[style.minutes]} />
-      </View>
+      Animated.timing(this.state.index, {
+        toValue: this.state.tick,
+        duration: TICK_INTERVAL / 2,
+        useNativeDriver: true,
+      }),
+    ]).start();
+  };
 
-      <View style={[style.mover]}>
-        <View style={[style.seconds]} />
+  render() {
+    const {
+      index,
+      scales: [
+        smallQuadranScale,
+        mediumQuadranScale,
+        bigQuadranScale,
+        secondScale,
+        minuteScale,
+        hourScale,
+      ],
+    } = this.state;
+
+    const interpolated = {
+      inputRange: [0, 360],
+      outputRange: ['0deg', '360deg'],
+    };
+
+    const secondDegrees = Animated.multiply(index, 6);
+    const transformSeconds = {
+      transform: [
+        {rotate: secondDegrees.interpolate(interpolated)},
+        {scale: secondScale},
+      ],
+    };
+
+    const rotateMinutes = Animated.divide(
+      secondDegrees,
+      new Animated.Value(60),
+    );
+    const transformMinutes = {
+      transform: [
+        {rotate: rotateMinutes.interpolate(interpolated)},
+        {scale: minuteScale},
+      ],
+    };
+
+    const rotateHours = Animated.divide(rotateMinutes, new Animated.Value(12));
+    const transformHours = {
+      transform: [
+        {rotate: rotateHours.interpolate(interpolated)},
+        {scale: hourScale},
+      ],
+    };
+
+    return (
+      <View style={style.container}>
+        <StatusBar hidden={true} />
+
+        <Animated.View
+          style={[style.bigQuadran, {transform: [{scale: bigQuadranScale}]}]}
+        />
+        <Animated.View
+          style={[
+            style.mediumQuadran,
+            {transform: [{scale: mediumQuadranScale}]},
+          ]}
+        />
+
+        <Animated.View style={[style.mover, transformHours]}>
+          <View style={[style.hours]} />
+        </Animated.View>
+
+        <Animated.View style={[style.mover, transformMinutes]}>
+          <View style={[style.minutes]} />
+        </Animated.View>
+
+        <Animated.View style={[style.mover, transformSeconds]}>
+          <View style={[style.seconds]} />
+        </Animated.View>
+
+        <Animated.View
+          style={[
+            style.smallQuadran,
+            {transform: [{scale: smallQuadranScale}]},
+          ]}
+        />
       </View>
-    </View>
-  );
+    );
+  }
 }
 
 const style = StyleSheet.create({
@@ -76,7 +169,6 @@ const style = StyleSheet.create({
     height: '35%',
     borderRadius: 4,
     marginTop: '15%',
-    position: 'absolute',
     backgroundColor: 'rgba(0,0,0,0.4)',
   },
   minutes: {
@@ -84,14 +176,12 @@ const style = StyleSheet.create({
     height: '45%',
     borderRadius: 3,
     marginTop: '5%',
-    position: 'absolute',
     backgroundColor: 'rgba(0,0,0,0.8)',
   },
   seconds: {
     width: 2,
     height: '50%',
     borderRadius: 2,
-    position: 'absolute',
     backgroundColor: 'rgba(277,71,134,1)',
   },
   bigQuadran: {
