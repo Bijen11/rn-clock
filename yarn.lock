@@ -1242,9 +1242,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/cli@npm:0.18.10":
-  version: 0.18.10
-  resolution: "@expo/cli@npm:0.18.10"
+"@expo/cli@npm:0.18.11":
+  version: 0.18.11
+  resolution: "@expo/cli@npm:0.18.11"
   dependencies:
     "@babel/runtime": ^7.20.0
     "@expo/code-signing-certificates": 0.0.5
@@ -1324,7 +1324,7 @@ __metadata:
     ws: ^8.12.1
   bin:
     expo-internal: build/bin/cli
-  checksum: 462d0fd3827fbebca4fb549784ee1f45892190c147ecfef6793aeff7691438c6e08ae9905e3241875d4754396dc52f94984232b4d8e95b981e3183441af8d69b
+  checksum: 66de8fff4e4fe78e5b8dbfe97665ce48e67f03b0d12acaad7864a2b4e80dd3dc1408a2df468d7a3527fd1e25c5f71b448a6aa8207b6e0b73ce79e99743e8b387
   languageName: node
   linkType: hard
 
@@ -1590,16 +1590,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/vector-icons@npm:^14.0.0":
-  version: 14.0.1
-  resolution: "@expo/vector-icons@npm:14.0.1"
-  dependencies:
-    prop-types: ^15.8.1
-  checksum: a2d359144715c854646e82e8d4ead86d6517d90604089a580e13c02f1548828446d191d8c54c871bb1505d524bf89da1e881f9815e920d58b91a9387d97bad92
-  languageName: node
-  linkType: hard
-
-"@expo/vector-icons@npm:^14.0.2":
+"@expo/vector-icons@npm:^14.0.0, @expo/vector-icons@npm:^14.0.2":
   version: 14.0.2
   resolution: "@expo/vector-icons@npm:14.0.2"
   dependencies:
@@ -2616,10 +2607,10 @@ __metadata:
   linkType: hard
 
 "@remix-run/node@npm:^2.7.2":
-  version: 2.9.1
-  resolution: "@remix-run/node@npm:2.9.1"
+  version: 2.9.2
+  resolution: "@remix-run/node@npm:2.9.2"
   dependencies:
-    "@remix-run/server-runtime": 2.9.1
+    "@remix-run/server-runtime": 2.9.2
     "@remix-run/web-fetch": ^4.4.2
     "@web3-storage/multipart-parser": ^1.0.0
     cookie-signature: ^1.1.0
@@ -2631,22 +2622,22 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a0f40590fa20e223e0a4fa7a2999732282a12894d05eb19062e4280d402815c1878afb55071e83e8b89b8c856f860b7f06de05e68300b69800a630028b48122c
+  checksum: f1d43e3deef75f7ececf4ef9625d2811e88adab61e3d3a8291d31e91ffdafa17a0bb249609cff45d30d2587868be04a6834ec6f36c74936619e0a567c0d7b017
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.16.0":
-  version: 1.16.0
-  resolution: "@remix-run/router@npm:1.16.0"
-  checksum: c8afdf90b19a5a9dfb14425d57de029cadf4bbb51d668885b10df5ea2f82279d7552a9939274b519de0da40550f48e5a6c07e5d4049dbd3838fcaa29819bd641
+"@remix-run/router@npm:1.16.1":
+  version: 1.16.1
+  resolution: "@remix-run/router@npm:1.16.1"
+  checksum: 69068815832b30d2a5c063ac1c75365c45cf5b484dab65e1b3129fdbb3c2a7b866401733f766e550dbca1eaf0b84bc772a9c55310f4dd21eb53e62eb1b4625d0
   languageName: node
   linkType: hard
 
-"@remix-run/server-runtime@npm:2.9.1":
-  version: 2.9.1
-  resolution: "@remix-run/server-runtime@npm:2.9.1"
+"@remix-run/server-runtime@npm:2.9.2":
+  version: 2.9.2
+  resolution: "@remix-run/server-runtime@npm:2.9.2"
   dependencies:
-    "@remix-run/router": 1.16.0
+    "@remix-run/router": 1.16.1
     "@types/cookie": ^0.6.0
     "@web3-storage/multipart-parser": ^1.0.0
     cookie: ^0.6.0
@@ -2658,7 +2649,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 7fd816c066a7057eb0286508901613eb05af86e1b1cfeae57d167e232375251a1b631010a763d8133b252a5ef365038e2e6e020fb0dfd891dc9057033e026db9
+  checksum: 02680ddf9cea86444900883e19d6268ac6991d908783e7a58cec62460cab2dae77da9b60e2256737ac21d3b15bc507986b37091e5f718298508015bd6820ca86
   languageName: node
   linkType: hard
 
@@ -2955,12 +2946,12 @@ __metadata:
   linkType: hard
 
 "@types/react@npm:*":
-  version: 18.3.1
-  resolution: "@types/react@npm:18.3.1"
+  version: 18.3.2
+  resolution: "@types/react@npm:18.3.2"
   dependencies:
     "@types/prop-types": "*"
     csstype: ^3.0.2
-  checksum: 9224ef319a0c2b7f66e7e7f06012aa5eb638a6c76c9742843eab1a5d243f2bed5ff829ddbb41efd60d33a266420528adfcb84cb93f238b00e905f98c3a355768
+  checksum: d0b8b9d0ede6cd28dbbe34106d914b5e3652d9d7aa9d0f32fe6171506b6fc7c826d9d6571642976a5422bd29c5022fd893a710ed59a1177a0c1df8e02cf17ffe
   languageName: node
   linkType: hard
 
@@ -3551,9 +3542,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-expo@npm:~11.0.5":
-  version: 11.0.5
-  resolution: "babel-preset-expo@npm:11.0.5"
+"babel-preset-expo@npm:~11.0.6":
+  version: 11.0.6
+  resolution: "babel-preset-expo@npm:11.0.6"
   dependencies:
     "@babel/plugin-proposal-decorators": ^7.12.9
     "@babel/plugin-transform-export-namespace-from": ^7.22.11
@@ -3564,7 +3555,7 @@ __metadata:
     "@react-native/babel-preset": ~0.74.83
     babel-plugin-react-native-web: ~0.19.10
     react-refresh: ^0.14.2
-  checksum: 99055eba086e2a73c1dd2f63ab4a1c46f8465b900f6922dadad3d81f9fe2a85c7fa61e7ec334e42b6f5ff72ea059851e45cfdf92f3e27270145ef79cd828c476
+  checksum: 208fdbd99ec970d4ee3a1fbed28726b58aa852a65a0a92f127df5892520a01e18beae26fd99d90078027097186940c3754209494936a713f7fe44f19db4364dd
   languageName: node
   linkType: hard
 
@@ -4031,7 +4022,7 @@ __metadata:
     react-dom: 18.2.0
     react-native: 0.74.1
     react-native-gesture-handler: ~2.16.1
-    react-native-reanimated: ^3.11.0
+    react-native-reanimated: 3.10.1
     react-native-safe-area-context: 4.10.1
     react-native-screens: 3.31.1
     react-native-web: ~0.19.10
@@ -4704,9 +4695,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.668":
-  version: 1.4.762
-  resolution: "electron-to-chromium@npm:1.4.762"
-  checksum: f5bfb8601a98fbf0e26190e786fe004a3c447708967eca1fbbdf2af994729ee1ee087daa6c185ba7f237adf9ff944c867840bf778d22b260a11400a1a2456555
+  version: 1.4.766
+  resolution: "electron-to-chromium@npm:1.4.766"
+  checksum: 43e12e4fe07aa4401427faa09f1c263f5549bd51813b5828882bfe637543bea246d5e2bb8db35a2c41b20d640efc02ca7c408ad97f193446d8b6d598db5ead7d
   languageName: node
   linkType: hard
 
@@ -5113,14 +5104,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-font@npm:~12.0.4":
-  version: 12.0.4
-  resolution: "expo-font@npm:12.0.4"
+"expo-font@npm:~12.0.4, expo-font@npm:~12.0.5":
+  version: 12.0.5
+  resolution: "expo-font@npm:12.0.5"
   dependencies:
     fontfaceobserver: ^2.1.0
   peerDependencies:
     expo: "*"
-  checksum: f56e624568769c9113831ee3131cae5b7d7372d18493967e708b6d6c846c50ca22220f7a4ee459885db5efebf90bff7921564e3fe458797c978725be5685b033
+  checksum: 74284f7aaa809de1432e98090eca61f255c584f1a66e979a8caf435bf6d97f7322c1a6c9428ebb6ce5f4dd20a2987e8ee714a8170cc2782d1f7b87900ccc4b7e
   languageName: node
   linkType: hard
 
@@ -5168,8 +5159,8 @@ __metadata:
   linkType: hard
 
 "expo-router@npm:~3.5.11":
-  version: 3.5.11
-  resolution: "expo-router@npm:3.5.11"
+  version: 3.5.12
+  resolution: "expo-router@npm:3.5.12"
   dependencies:
     "@expo/metro-runtime": 3.2.1
     "@expo/server": ^0.4.0
@@ -5196,7 +5187,7 @@ __metadata:
       optional: true
     react-native-reanimated:
       optional: true
-  checksum: a82f8b9212118745bafd286308eaa16d09a6ad55031fc81e9387670862361b034f1aeeb03bc55380a34021c779d2f177e9779ed3c3119422be5e4b9d18e4bae6
+  checksum: b8bfaa7775bf6f61d579b2a1b6a7aee150fbb32b28846da03a60757b3b68f7995d06c8435891b60d6d74df39d50793682b385c224d16a23f991519c019f7d07f
   languageName: node
   linkType: hard
 
@@ -5240,19 +5231,19 @@ __metadata:
   linkType: hard
 
 "expo@npm:~51.0.2":
-  version: 51.0.2
-  resolution: "expo@npm:51.0.2"
+  version: 51.0.5
+  resolution: "expo@npm:51.0.5"
   dependencies:
     "@babel/runtime": ^7.20.0
-    "@expo/cli": 0.18.10
+    "@expo/cli": 0.18.11
     "@expo/config": 9.0.1
     "@expo/config-plugins": 8.0.4
     "@expo/metro-config": 0.18.3
     "@expo/vector-icons": ^14.0.0
-    babel-preset-expo: ~11.0.5
+    babel-preset-expo: ~11.0.6
     expo-asset: ~10.0.6
     expo-file-system: ~17.0.1
-    expo-font: ~12.0.4
+    expo-font: ~12.0.5
     expo-keep-awake: ~13.0.1
     expo-modules-autolinking: 1.11.1
     expo-modules-core: 1.12.10
@@ -5260,7 +5251,7 @@ __metadata:
     whatwg-url-without-unicode: 8.0.0-3
   bin:
     expo: bin/cli
-  checksum: b714f73fcf184a03ec82bf6ed9279194859d8946eb360e77ec49764b68a81ad686337342e669ef92c075616c53685d1808fab62e774b38961df651819f8efc03
+  checksum: 789fe4afbe3a778897e3df1002ec561cb5b3cc4b1d8310dbffb0d577ef485da555ecd819272cbb31b8851d846f8d26101aef81f65719775b0f6715978f9ce494
   languageName: node
   linkType: hard
 
@@ -5762,8 +5753,8 @@ __metadata:
   linkType: hard
 
 "glob@npm:^10.2.2, glob@npm:^10.3.10":
-  version: 10.3.14
-  resolution: "glob@npm:10.3.14"
+  version: 10.3.15
+  resolution: "glob@npm:10.3.15"
   dependencies:
     foreground-child: ^3.1.0
     jackspeak: ^2.3.6
@@ -5772,7 +5763,7 @@ __metadata:
     path-scurry: ^1.11.0
   bin:
     glob: dist/esm/bin.mjs
-  checksum: 6fb26013e6ee1cc0fe099c746f5870783612082342eeeca80031446ca8839acc13243015056e4f3158d7c4260d32f37ff1c2aad9c273672ed0911c8262316041
+  checksum: c7aeae0b4eea0dfedc6682b71a8ad4d1ea9dfec0f2440571f916e1918c046824c8d441bbe1965c06fede025a0726c6daab5ae8019afe667364f43776eaaf9044
   languageName: node
   linkType: hard
 
@@ -8505,9 +8496,9 @@ __metadata:
   linkType: hard
 
 "nwsapi@npm:^2.2.2":
-  version: 2.2.9
-  resolution: "nwsapi@npm:2.2.9"
-  checksum: 3ab2bc47d5507a76e2fdee5aae7ea2875c6def912d0401126cad3e39825a7decb7a02622810c855a7902bd31e917e606b37882dca12b0ae54b4d3b70275de927
+  version: 2.2.10
+  resolution: "nwsapi@npm:2.2.10"
+  checksum: 5f1d361b38c47ab49727d5ea8bbfeb5867ae6de0e538eec9a8b77c88005ddde36d8b930e0730b50ee5e5dda949112c0f9ffed1bf15e7e1b3cd9cfa319f5a9b6f
   languageName: node
   linkType: hard
 
@@ -8856,12 +8847,12 @@ __metadata:
   linkType: hard
 
 "path-scurry@npm:^1.11.0":
-  version: 1.11.0
-  resolution: "path-scurry@npm:1.11.0"
+  version: 1.11.1
+  resolution: "path-scurry@npm:1.11.1"
   dependencies:
     lru-cache: ^10.2.0
     minipass: ^5.0.0 || ^6.0.2 || ^7.0.0
-  checksum: 79732c6a4d989846632d3ff8a441fabb8ea197ecdc7f328ea0f1694d611ed9bd3f0c940582d91c7dd108a29898866212a359d1a9b92ca69c4dbb16ebeae86b73
+  checksum: 890d5abcd593a7912dcce7cf7c6bf7a0b5648e3dee6caf0712c126ca0a65c7f3d7b9d769072a4d1baf370f61ce493ab5b038d59988688e0c5f3f646ee3c69023
   languageName: node
   linkType: hard
 
@@ -8873,9 +8864,9 @@ __metadata:
   linkType: hard
 
 "picocolors@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "picocolors@npm:1.0.0"
-  checksum: a2e8092dd86c8396bdba9f2b5481032848525b3dc295ce9b57896f931e63fc16f79805144321f72976383fc249584672a75cc18d6777c6b757603f372f745981
+  version: 1.0.1
+  resolution: "picocolors@npm:1.0.1"
+  checksum: fa68166d1f56009fc02a34cdfd112b0dd3cf1ef57667ac57281f714065558c01828cdf4f18600ad6851cbe0093952ed0660b1e0156bddf2184b6aaf5817553a5
   languageName: node
   linkType: hard
 
@@ -9285,9 +9276,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:^3.11.0":
-  version: 3.11.0
-  resolution: "react-native-reanimated@npm:3.11.0"
+"react-native-reanimated@npm:3.10.1":
+  version: 3.10.1
+  resolution: "react-native-reanimated@npm:3.10.1"
   dependencies:
     "@babel/plugin-transform-arrow-functions": ^7.0.0-0
     "@babel/plugin-transform-nullish-coalescing-operator": ^7.0.0-0
@@ -9301,7 +9292,7 @@ __metadata:
     "@babel/core": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: 5d0c6be5c9b6d933755e50895a1ec903100800a83b7b48fbc6a4242063f0de52a78f5af69d39da4241f6071a4416602f150c3a53e9a97d20880edb3612ffadbd
+  checksum: b41808a122799806a524601e75620c8d79ebf8a0127f57fe370412f90471560005f65df8549fd8c39e627c58141a921c849fec9d263f481f153f0ddc90e4a5b6
   languageName: node
   linkType: hard
 
