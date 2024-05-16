@@ -48,7 +48,7 @@ export default class RootLayout extends React.Component {
       return Animated.spring(animated, {
         toValue: 1,
         tension: 18,
-        friction: 3,
+        friction: 4,
         useNativeDriver: true,
       });
     });
