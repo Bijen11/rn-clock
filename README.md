@@ -1,3 +1,7 @@
+# Preview 👀
+![Simulator Screen Recording - iPhone 15 Pro - 2024-06-02 at 21 44 34](https://github.com/Bijen11/rn-clock/assets/42229292/afcdfa18-5311-43a6-86ac-5e41b9c4de5a)
+
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
